@@ -1,7 +1,14 @@
 import React from 'react'
+import ShopCard from './product/ShopCard'
 
-export default function CardsView() {
+export default function CardsView({cards}) {
   return (
-    <div>CardsView</div>
+    <div className='cards-list'>
+        {
+        cards.map((card, index) => 
+            <ShopCard card={card} key={index}/>
+            )
+        }
+    </div>
   )
 }

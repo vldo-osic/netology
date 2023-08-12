@@ -1,10 +1,10 @@
-import { useState } from 'react'
 import './App.css'
+import Store from './components/Store'
 
 function App() {
     return (
-        <div>
-            
+        <div className='app'>
+            <Store/>
         </div>
     )
 }

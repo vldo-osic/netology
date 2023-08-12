@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import IconSwitch from '../UI/IconSwitch';
+import ListView from './ListView';
+import CardsView from './CardsView';
 
 const products = [{
     name: "Nike Metcon 2",
@@ -32,8 +35,23 @@ const products = [{
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/layouts/img/5.jpg"
   }];
   
+
+
 export default function Store() {
-  return (
-    <div>Store</div>
-  )
+    
+    const [viewMode, setViewMode] = useState('view_list')   
+    const handleSwitch = () =>
+        viewMode === 'view_list' ? setViewMode('view_module')
+                                 : setViewMode('view_list')
+                                 
+    return (
+        <div className='store'>
+            <IconSwitch icon={viewMode} onSwitch={() => handleSwitch()}/>
+            {
+            viewMode === 'view_list' ? 
+                <ListView items={products}/>
+              : <CardsView cards={products}/>
+            }
+        </div>
+    )
 }
