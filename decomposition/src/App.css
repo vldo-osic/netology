@@ -1,0 +1,111 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+a {
+    text-decoration: none;
+    color: rgb(26, 24, 24);
+}
+.RowList {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+}
+.ColumnList {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+    align-items: center;
+}
+.news-container {
+    width: 60%;
+    margin-left: 10%;
+}
+.news-container .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    gap: 20px;
+}
+.header__date {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(127, 127, 136);
+}
+.news-type {
+    color: rgb(116, 160, 201);
+}
+.news-type__active {
+    color: rgb(67, 67, 143);
+}
+
+.rates-list {
+    display: inline-block;
+    margin: 0 auto;
+}
+.rate__currency, .rate__price {
+    font-weight: 600;
+}
+.rate__difference {
+    color: rgb(176, 179, 179);
+}
+
+.search-container {
+    display: grid;
+    grid-template-columns: 110px auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-items: start;
+    column-gap: 10px;
+}
+.search-container__logo {
+    grid-area: 1 / 1 / 4 / 2;
+    cursor: pointer;
+}
+.search-container h3 {
+    margin: 10px;
+}
+.search-container h3 span {
+    color: rgb(149, 154, 170);
+    cursor: pointer;
+}
+
+.services-list .ColumnList {
+    gap: 30px;
+    padding: 10px;
+    
+}
+.services-list__item {
+    font-size: 21px;
+    font-weight: 500;
+    color: rgb(67, 67, 143)
+}
+
+.search-container__search-line {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 100px;
+
+    margin: 10px;
+    width: 85%;
+
+    border: 3px solid rgb(211, 203, 96);
+    border-radius: 4px;
+}
+.search-container__search-line label input {
+    width: 98%;
+    padding: 1%;
+    border: none;
+}
+.search-container__search-line button {
+    background: rgb(211, 203, 96);
+    cursor: pointer;
+    border: none;
+}

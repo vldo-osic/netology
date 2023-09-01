@@ -17,11 +17,12 @@ function App() {
         const {name, value} = e.target
         setForm(prevForm => ({...prevForm, [name]: value}))
     }
+    
     const colorToRGB = (color: string) => {
         const hexFormatRegExp = /^#([a-f0-9]{6})$/i
         if (hexFormatRegExp.test(color)) {
             return 'rgb(' 
-                + color.match(/[a-f0-9]{2}/gi)
+                + color.match(/[a-f0-9]{2}/gi) || []
                        .map(hexCode => parseInt(hexCode, 16))
                        .join(',') 
                 + ')'
@@ -29,6 +30,7 @@ function App() {
             return 'Ошибка!'
         }
     }
+
     return (
         <div className='app' style={colorToRGB(form.color) !== 'Ошибка!' ? 
                                     {backgroundColor: form.color} 
