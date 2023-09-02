@@ -109,3 +109,8 @@ a {
     cursor: pointer;
     border: none;
 }
+
+.ad {
+    text-align: start;
+    position: absolute;
+}

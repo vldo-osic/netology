@@ -3,7 +3,7 @@ type Icon = {
     size: string
 }
 
-type AD = {
+type adData = {
     imgURL?: string
     title?: string
     subtitle?: string
